@@ -1,0 +1,43 @@
+.App {
+  color: white;
+}
+
+body {
+  background-color: #202124;
+}
+
+/* Контейнер для видео */
+.video-container {
+  position: fixed; /* Чтобы видео всегда оставалось на фоне */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Видео на заднем плане */
+}
+
+/* Настройки видео */
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  /* object-fit: cover;  */
+}
+
+/* Контент, который идет поверх видео */
+.content {
+  position: relative;
+  top: 40%;
+  z-index: 1; /* Контент должен быть выше видео */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0 50px;
+}
+
+.content p {
+  padding-top: 50px;
+}
